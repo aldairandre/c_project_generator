@@ -1,6 +1,6 @@
 {
-  "name": "test",
-  "displayName": "test",
+  "name": "generate-c-project",
+  "displayName": "generate C Project",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -12,10 +12,12 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "test.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "generate-c-project.gerarProjectC",
+        "title": "Gerar Porjecto C"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
@@ -23,12 +25,16 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.54.0",
+    "@types/intl": "^1.2.2",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
-    "eslint": "^8.54.0",
-    "typescript": "^5.3.2",
+    "@types/vscode": "^1.54.0",
     "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.8"
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "intl": "^1.2.5"
   }
 }
