@@ -1,5 +1,7 @@
-const vscode = require('vscode');
-const fs = require("fs");
+const { downloadRepository } = require("./src/downloadRepository");
+const createFolder  = require("./src/createFolder");
+
+const vscode = require("vscode");
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -23,22 +25,18 @@ const fs = require("fs");
 
 function activate(context) {
 
-	console.log('Congratulations, your extension "generator_c_project" is now active!');
-	
-	let disposable = vscode.commands.registerCommand('test.helloWorld', function () {
+  let cloneRepo = vscode.commands.registerCommand(
+    "generate-c-project.gerarProjectC",
+    createFolder
+  );
 
-		vscode.window.showInformationMessage('Hello World from test!');
-		
-	});
-
-
-	context.subscriptions.push(disposable);
+  context.subscriptions.push(cloneRepo);
 }
 
 // This method is called when your extension is deactivated
 function deactivate() {}
 
 module.exports = {
-	activate,
-	deactivate
-}
+  activate,
+  deactivate,
+};
