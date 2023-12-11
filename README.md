@@ -10,4 +10,4 @@ run `f5`
 
 then press `shift + p`
 
-then type `Gerar `
+then type `Gerar Projecto C`
