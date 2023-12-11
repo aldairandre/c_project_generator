@@ -15,7 +15,7 @@
     "commands": [
       {
         "command": "generate-c-project.gerarProjectC",
-        "title": "Gerar Porjecto C"
+        "title": "Gerar Projecto C"
       }
     ]
   },

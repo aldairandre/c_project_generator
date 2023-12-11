@@ -5,7 +5,11 @@ const {typeOS,locale} = require("./const")
 
 
 const createProjectFolder = async () => {
-  const input = await vscode.window.showInputBox("Qual é o nome deseja dar ao seu projecto?");
+  const input = await vscode.window.showInputBox({
+    placeHolder: "Nome do projecto",
+    prompt: "Digite o nome que deseja dar para o seu projecto C",
+    value: "projecto_c"
+  });
   const terminal = vscode.window.createTerminal()
   terminal.name = input
   
