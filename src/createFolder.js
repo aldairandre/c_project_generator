@@ -1,7 +1,7 @@
 const downloadRepository = require("./downloadRepository");
 
 const vscode = require("vscode");
-const {projectFolder,typeOS,locale} = require("./const")
+const {typeOS,locale} = require("./const")
 
 
 const createProjectFolder = async () => {
@@ -13,25 +13,23 @@ const createProjectFolder = async () => {
   if(typeOS === "linux"){
     
     if(locale === "en") {
-      terminal.sendText(`mkdir /home/$USER/Documents/${projectFolder.en}`)
+      terminal.sendText(`mkdir /home/$USER/Documents/${input}`)
     }else if(locale === "pt"){
-      terminal.sendText(`mkdir /home/$USER/Documentos/${projectFolder.pt}`)
+      terminal.sendText(`mkdir /home/$USER/Documentos/${input}`)
     }
     
   }else if(typeOS === "win32") {
     if(locale === "en") {
-      terminal.sendText(`mkdir C:\'$USER\'Documents\'${projectFolder.en}`)
+      terminal.sendText(`mkdir C:\'$USER\'Documents\'${input}`)
     }else if(locale === "pt"){
-      terminal.sendText(`mkdir C:\'%USERNAME%\'Documents\'${projectFolder.pt}`)
+      terminal.sendText(`mkdir C:\'%USERNAME%\'Documents\'${input}`)
     }
   } else {
     vscode.window.showInformationMessage(typeOS)
   }
 
-  downloadRepository()
+  downloadRepository(input)
 
-
-  vscode.window.showInformationMessage(typeOS)
 };
 
 module.exports = createProjectFolder;
