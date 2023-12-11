@@ -1,0 +1,60 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn install
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/aldair/.dotnet:/home/aldair/.dotnet/tools:/home/aldair/.dotnet:/home/aldair/.dotnet/tools:/home/aldair/.dotnet:/home/aldair/.dotnet/tools:/home/aldair/.dotnet:/home/aldair/.dotnet/tools:/home/aldair/.dotnet:/home/aldair/.dotnet/tools
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.6.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
+
+npm manifest: 
+  {
+    "name": "test",
+    "displayName": "test",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+      "vscode": "^1.54.0"
+    },
+    "categories": [
+      "Other"
+    ],
+    "activationEvents": [],
+    "main": "./extension.js",
+    "contributes": {
+      "commands": [{
+        "command": "test.helloWorld",
+        "title": "Hello World"
+      }]
+    },
+    "scripts": {
+      "lint": "eslint .",
+      "pretest": "yarn run lint",
+      "test": "vscode-test"
+    },
+    "devDependencies": {
+      "@types/vscode": "^1.54.0",
+      "@types/mocha": "^10.0.6",
+      "@types/node": "18.x",
+      "eslint": "^8.54.0",
+      "typescript": "^5.3.2",
+      "@vscode/test-cli": "^0.0.4",
+      "@vscode/test-electron": "^2.3.8"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
