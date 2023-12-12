@@ -1,6 +1,6 @@
 {
-  "name": "generate-c-project",
-  "displayName": "generate C Project",
+  "name": "c-project-generator",
+  "displayName": "C Project Generator",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -14,8 +14,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "generate-c-project.gerarProjectC",
-        "title": "Gerar Projecto C"
+        "command": "c-project-generator.criarProjectoC",
+        "title": "Criar Projecto C"
+      },
+      {
+        "command": "c-project-generator.createCProject",
+        "title": "Create C Project"
       }
     ]
   },

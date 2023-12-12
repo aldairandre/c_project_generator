@@ -25,12 +25,18 @@ const vscode = require("vscode");
 
 function activate(context) {
 
-  let cloneRepo = vscode.commands.registerCommand(
-    "generate-c-project.gerarProjectC",
+  let generatePtVersion = vscode.commands.registerCommand(
+    "c-project-generator.criarProjectoC",
     createFolder
   );
 
-  context.subscriptions.push(cloneRepo);
+	let generateEnVersion = vscode.commands.registerCommand(
+    "c-project-generator.createCProject",
+    createFolder
+  );
+	
+
+  context.subscriptions.push(generatePtVersion,generateEnVersion);
 }
 
 // This method is called when your extension is deactivated
