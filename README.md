@@ -1,4 +1,4 @@
-# Generate C Project
+# C Project Generator
  <br/>
  <br/>
 vscode extension to generate basic project model in c <br/> <br/>
